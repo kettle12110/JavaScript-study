@@ -14,5 +14,3 @@ const colorBg =() => {
 }
 }
 color.addEventListener('input',colorBg);
-
-
