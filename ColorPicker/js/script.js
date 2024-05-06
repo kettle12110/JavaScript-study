@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 document.querySelector('#colorText').textContent = `カラーコード:${document.querySelector('#colorPicker').value}`;
 =======
+=======
+>>>>>>> 7a9eccdd02db30434b93129afbc1d7c7065c3160
 const text = document.querySelector('#colorText');
 const color = document.querySelector('#colorPicker');
 
@@ -16,5 +19,9 @@ const colorBg =() => {
         text.textContent = `カラーコード:${color.value}`;
 }
 }
+<<<<<<< HEAD
+color.addEventListener('input',colorBg);
+>>>>>>> 7a9eccdd02db30434b93129afbc1d7c7065c3160
+=======
 color.addEventListener('input',colorBg);
 >>>>>>> 7a9eccdd02db30434b93129afbc1d7c7065c3160
