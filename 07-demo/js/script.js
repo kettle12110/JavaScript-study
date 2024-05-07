@@ -1,10 +1,8 @@
 const text= document.querySelector('#text');
-const count= document.querySelector('#count')
+const count= document.querySelector('#count');
 
 text.addEventListener('keyup',()=>{
     count.textContent = text.value.length;
-});
-
 if(text.value.length>100){
     //alert クラスを加える
     count.classList.add('alert');
@@ -13,3 +11,4 @@ if(text.value.length>100){
     //alert クラスを外す
     count.classList.remove('alert');
 }
+});
