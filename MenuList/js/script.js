@@ -1,12 +1,40 @@
 const menu = document.querySelector('#menu');
 
 const lists =[
-    'strawberry.jpg',
-    'lime.jpg',
-    'mango.jpg',
-    'lemon.jpg',
-    'fig.jpg',
-    'apple.jpg',
+    {
+        name:'イチゴ',
+        img:'strawberry.jpg',
+        price:450,
+    },
+    {
+        name:'ライム',
+        img:'lime.jpg',
+        price:400,
+    },
+    {
+        name:'イチゴ',
+        img:'mango.jpg',
+        price:500,
+    },
+    {
+        name:'イチゴ',
+        img:'lemon.jpg',
+        price:400,
+    },
+    {
+        name:'イチゴ',
+        img:'fig.jpg',
+        price:500,
+    },
+    {
+        name:'リンゴ',
+        img:'apple.jpg',
+        price:400,
+    }
 ];
-const content =`<div><img src="images/${lists[1]}" alt =""></div>`;
+for(let i =0; i<lists.length; i++){
+    const {name,img,price}= lists[i];
+    
+const content =`<div><img src="images/${img}" alt =""><h2>${name}</h2><p>${price}</p></div>`;
 menu.insertAdjacentHTML('beforeend',content);
+}
