@@ -8,5 +8,11 @@ const lists =[
     'fig.jpg',
     'apple.jpg',
 ];
-const content =`<div><img src="images/${lists[1]}" alt =""></div>`;
-menu.insertAdjacentHTML('beforeend',content);
+
+for(let i =0; i<lists.length; i++){
+    const content = `<div><img src="images/${lists[i]}" alt=""></div>`;
+    menu.insertAdjacentHTML('beforeend',content);
+}
+
+
+
