@@ -106,7 +106,7 @@ menuClose.addEventListener('click',()=>{
 });
 });
 //監視対象が範囲内に現れたら実行する動作
-const animateFade=(entries)=>{
+const animateFade=(entries,obs)=>{
     entries.forEach((entry)=>{
         if(entry.isIntersecting){
         entry.target.animate(
@@ -121,6 +121,7 @@ const animateFade=(entries)=>{
                 fill:'forwards',
             }
         );
+        obs.unobserve(entry.target);
         }
     })
 }
