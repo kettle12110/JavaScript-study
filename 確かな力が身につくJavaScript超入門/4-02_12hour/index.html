@@ -18,9 +18,7 @@
 <main>
 <div class="container">
 <section>
- <P>円周率は<span id ="pi"></span>です。</P>
- <P>ふつうに切り捨てると<span id ="floor"></span></P>
- <p>小数第2位で切り捨てると<span id ="output"></span>です。</p>
+    <p>最終アクセス日時:<span id="time"></span></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -33,15 +31,20 @@
 <script>
     'use strict';
 
-document.getElementById('pi').textContent= Math.PI;
-document.getElementById('floor').textContent = Math.floor(Math.PI);
-
-function point(num,digit){
-    const mover = 10 **digit;
-    return Math.floor(num * mover)/mover;
-}
-
-document.getElementById('output').textContent = point(Math.PI,2);
+    const now =new Date();
+    const year = now.getFullYear();
+    const month = now.getMonth();
+    const date = now.getDate();
+    const hour = now.getHours();
+    const min = now.getMinutes();
+    let appm = 'appm';
+    if(hour<12){
+        appm='a.m';
+    }else{
+        appm='p.m';
+    }
+    const output = `${year}/${month +1 }/${date} ${hour % 12 }:${min}:${appm}`;
+    document.getElementById('time').textContent = output;
 </script>
 </body>
 </html>
